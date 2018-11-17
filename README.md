@@ -41,13 +41,13 @@ My project includes the following files:
 * model.h5 containing a trained convolution neural network 
 * environments.yml conda environment (Use TensorFlow without GPU)
 * environments-gpu.yml conda environment (Use TensorFlow with GPU)
-* README.md and README.pdf summarizing the results.
+* README files (markdown) summarizing the results.
 * track1.mp4  well trained result on track1
 * track1_not_good.mp4  overfitted result on track1
 *  track2.mp4  well trained result on track2
-* track2_not_good.mp4 overfitted result on track2
+* track2_not_good.mp4 overfitted result on track2.
 
-Since the data files exceed the storage limit 100MB per commit of the github, so they are not listed here. 
+Since the data files exceed the storage limit 100MB per commit of the github, so they are not listed here. 
 
 #### 2. Submission includes functional code
 
@@ -64,7 +64,7 @@ conda env create -f environment-gpu.yml
 
 ```
 
-Double click the `beta_simulator_mac` app, and select the  the training mode in the Udacity provided simulator, then click the record button to select the folder where driving_log.csv and the IMG folder are saved, then try to maneuver the simulated car on the track for more than 10 minutes to gather enough images and labels for training. The weights after the CNN training are saved in the model.h5 file. 
+Double click the `beta_simulator_mac` app, and select the  the training mode in the Udacity provided simulator, then click the record button to select the folder where driving_log.csv and the IMG folder are saved, then try to maneuver the simulated car on the track for more than 10 minutes to gather enough images and labels for training. The weights after the CNN training are saved in the model.h5 file. 
 
 
 drive.py file, the car can be driven autonomously around the track by executing 
@@ -72,7 +72,8 @@ drive.py file, the car can be driven autonomously around the track by executing
 ```sh
 python drive.py model.h5 run
 ```
-and the directory in which to save the images seen by the agent is set to `run` folder.
+
+The directory in which to save the images seen by the agent is set to `run` folder.
 
 The images in the `run`  folder are compressed into a mp4 file called run.mp4 by the following command with the  `video.py` file the same as the Udacity presents.
 
@@ -205,7 +206,7 @@ and the similar right lane driving as
 The training on the original dataset provided by Udacity might not be robust, and the car would drive unsteadly along zigzag course and easily drove away from the track and climb up to the hills within 2 minutes as the following shows:
 
 <p align="center">
-  <img src="track1_not_good.gif" alt="Driving autonomously on track 2"/>
+  <img src="track1_not_good.gif" alt="Driving autonomously on track 1"/>
 </p>
 
 I then recorded the vehicle by randomly choosing the left/center/right image, randomly choosing the flipping image as well as randomly shifting levels, adjusting brightness etc. The training data grow to 48351 images, and these images show what a recovery looks like as follows
